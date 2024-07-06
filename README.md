@@ -21,7 +21,7 @@ Current Progress
 Both modes of the parser are now complete for regular Markdown!
 
 The "document" parser implements all of regular Markdown,
-plus the `~~~~` code blocks from Markdown Extra.
+plus the `~~~~` and <code>\`\`\`</code> code blocks from Markdown Extra.
 (I'll add more of Markdown Extra soon.)
 
 The "comment" parser is the same,
