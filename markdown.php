@@ -134,7 +134,7 @@ class Document extends Element {
 				// Link reference
 				$lines[] = array('type'=>'ref', 'ref'=>$matches[1], 'link'=>$matches[2], 'title'=>$matches[3], 'raw'=>$rawline);
 			}
-			else if(preg_match("/^(~{3,})(.*)/", $rawline, $matches)) {
+			else if(preg_match("/^(~{3,}|`{3,})(.*)/", $rawline, $matches)) {
 				// Explicit code delimiter
 				$lines[] = array('type'=>'code', 'tildas'=>strlen($matches[1]), 'data'=>$matches[2], 'raw'=>$rawline);
 			}
