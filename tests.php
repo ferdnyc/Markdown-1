@@ -104,5 +104,10 @@ assert_equal("foo\n<div>\n bar\n1. bar\n </div>\n</div>\nfoo", "<p>foo<div>\n ba
 assert_equal("~~~\n*foo*\n~~~", "<pre class='code'>*foo*</pre>");
 assert_equal("~~~~~\n*foo*\n~~~~~", "<pre class='code'>*foo*</pre>");
 assert_equal("~~~\n~~~~\n~~~", "<pre class='code'>~~~~</pre>");
+assert_equal("~~~\n```\n~~~", "<pre class='code'>```</pre>");
+
+assert_equal("```\n*foo*\n```", "<pre class='code'>*foo*</pre>");
+assert_equal("`````\n*foo*\n`````", "<pre class='code'>*foo*</pre>");
+assert_equal("```python\n~~~~\n```", "<pre class='code'>~~~~</pre>");
 
 assert_equal("foo | bar\n--- | ---\n*foo* cell | bar cell", "<table><thead><tr><th align=''>foo<th align=''>bar<tbody><tr><td align=''><i>foo</i> cell<td align=''>bar cell</table>");
